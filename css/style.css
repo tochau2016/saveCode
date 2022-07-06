@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Mulish", sans-serif;
+  color: #3c3c3c;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  background-color: #f7f9f9;
+}
+
+nav {
+  background-color: aquamarine;
+  height: 85px;
+}
+
+.parallax-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.chargeSwiper {
+  width: 100%;
+  height: 100%;
+}
+.chargeSwiper .swiper-slide {
+  background-color: #ffffff;
+}
+.chargeSwiper .blue-btn {
+  font-weight: 700;
+  font-size: 0.83vw;
+  line-height: 20px;
+  padding: 16px 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #1464f4;
+}
+.chargeSwiper .white-btn {
+  font-weight: 700;
+  font-size: 0.83vw;
+  line-height: 20.08px;
+  letter-spacing: 0.1em;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  color: #1464f4;
+}
+.chargeSwiper .intro {
+  display: flex;
+  height: 100vh;
+  padding: 30px;
+}
+.chargeSwiper .intro .parallax-bg {
+  display: flex;
+  width: 100%;
+}
+.chargeSwiper .intro h6 {
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 35px;
+  text-align: left;
+}
+.chargeSwiper .intro h2 {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 80px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .intro h2 {
+    font-size: 3rem;
+  }
+}
+.chargeSwiper .intro p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 30px;
+  width: 70%;
+  text-align: left;
+}
+.chargeSwiper .intro .buttons {
+  display: flex;
+}
+.chargeSwiper .intro .intro-content-left,
+.chargeSwiper .intro .intro-content-right {
+  width: 50%;
+}
+.chargeSwiper .intro .intro-content-left img,
+.chargeSwiper .intro .intro-content-right img {
+  width: 100%;
+}
+.chargeSwiper .intro .intro-content-left {
+  margin-right: 100px;
+}
+.chargeSwiper .intro .intro-content-left .left-content {
+  margin-bottom: 56px;
+}
+.chargeSwiper .intro .intro-content-right {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+.chargeSwiper .intro .intro-content-right h6 {
+  margin-top: 56px;
+}
+.chargeSwiper .battery-benefit {
+  height: 100vh;
+}
+.chargeSwiper .battery-benefit h2 {
+  padding-top: 64px;
+  margin-bottom: 48px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 24px;
+}
+.chargeSwiper .battery-benefit-content {
+  padding: 0 30px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.chargeSwiper .battery-benefit-content .content-item {
+  background-color: #f7f9f9;
+  border-radius: 10px;
+  width: 25%;
+  padding: 30px;
+}
+.chargeSwiper .battery-benefit-content .content-item p {
+  margin: 24px 0 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-benefit-content .content-item p {
+    margin: 16px 0 0;
+  }
+}
+.chargeSwiper .battery-benefit img {
+  position: absolute;
+  bottom: 0;
+}
+.chargeSwiper .battery-term {
+  padding: 63px 188px 0;
+}
+.chargeSwiper .battery-term h2 {
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60.24px;
+  letter-spacing: -2%;
+  text-align: center;
+}
+.chargeSwiper .battery-term-content {
+  display: flex;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  padding: 40px;
+  background: #f7f9f9;
+}
+.chargeSwiper .battery-term-content .left-content,
+.chargeSwiper .battery-term-content .right-content {
+  width: 50%;
+}
+.chargeSwiper .battery-term-content .left-content img {
+  width: 100%;
+}
+.chargeSwiper .battery-term-content .left-content h4 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 35.14px;
+  margin-bottom: 30px;
+}
+.chargeSwiper .battery-term-content .left-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.chargeSwiper .battery-term-content .right-content-top h4, .chargeSwiper .battery-term-content .right-content-bottom h4 {
+  font-weight: 600;
+  font-size: 20;
+  line-height: 25.1px;
+}
+.chargeSwiper .battery-term-content .right-content-top p, .chargeSwiper .battery-term-content .right-content-bottom p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.chargeSwiper .battery-term-content .right-content-top table thead, .chargeSwiper .battery-term-content .right-content-bottom table thead {
+  background-color: #7a99ac;
+}
+.chargeSwiper .battery-term-content .right-content-top table thead th, .chargeSwiper .battery-term-content .right-content-bottom table thead th {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.chargeSwiper .battery-term-content .right-content-top table tbody tr th,
+.chargeSwiper .battery-term-content .right-content-top table tbody tr td, .chargeSwiper .battery-term-content .right-content-bottom table tbody tr th,
+.chargeSwiper .battery-term-content .right-content-bottom table tbody tr td {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.chargeSwiper .battery-term-content .right-content-top span, .chargeSwiper .battery-term-content .right-content-bottom span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+.chargeSwiper .payment-guide .parallax-bg {
+  padding: 0 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.chargeSwiper .payment-guide .parallax-bg .title {
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60.24px;
+  margin-bottom: 16px;
+}
+.chargeSwiper .payment-guide .parallax-bg .subtitle {
+  text-align: center;
+  padding: 0 150px;
+  margin-bottom: 64px;
+}
+.chargeSwiper .payment-guide-content {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.chargeSwiper .payment-guide-content .content-item {
+  width: 50%;
+  background-color: #f7f9f9;
+  border-radius: 10px;
+  padding: 30px;
+}
+.chargeSwiper .payment-guide-content .content-item svg {
+  margin-bottom: 16px;
+}
+.chargeSwiper .payment-guide-content .content-item p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+.chargeSwiper .term-use-battery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.chargeSwiper .term-use-battery .parallax-bg {
+  padding: 64px;
+}
+.chargeSwiper .term-use-battery .content {
+  display: flex;
+  padding: 64px 8px 64px 130px;
+  background-color: #f7f9f9;
+  justify-content: space-around;
+  align-items: center;
+}
+.chargeSwiper .term-use-battery .content img {
+  width: 30vw;
+  height: 100%;
+}
+.chargeSwiper .term-use-battery .content .term-content {
+  width: 50%;
+}
+.chargeSwiper .term-use-battery .content .term-content ul {
+  list-style-type: none;
+}
+.chargeSwiper .term-use-battery .content .term-content ul h4 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 16px;
+}
+.chargeSwiper .term-use-battery .content .term-content ul svg {
+  margin-right: 4px;
+}
+.chargeSwiper .term-use-battery .content .term-content ul li {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.chargeSwiper .charge-planning .parallax-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 188px;
+}
+.chargeSwiper .charge-planning .parallax-bg img {
+  width: 50vw;
+}
+.chargeSwiper .charge-planning-content {
+  margin-right: 10vw;
+}
+.chargeSwiper .charge-planning-content h2 {
+  font-size: 3vw;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 70px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+}
+.chargeSwiper .charge-planning-content p {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 24px;
+}
+.chargeSwiper .charge-planning-content .numbers {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+.chargeSwiper .charge-planning-content .numbers-item {
+  display: block;
+  font-size: 1.04vw;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+.chargeSwiper .charge-planning-content .numbers-item span {
+  font-size: 2.71vw;
+}
+.chargeSwiper .charge-planning2 .parallax-bg {
+  padding: 64px 30px;
+}
+.chargeSwiper .charge-planning2 h2 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  line-height: 60.24px;
+  text-align: center;
+  letter-spacing: -2%;
+  margin-bottom: 16px;
+}
+.chargeSwiper .charge-planning2 p {
+  padding: 0 20vw;
+  text-align: center;
+}
+.chargeSwiper .charge-planning2 .summary {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  margin-bottom: 48px;
+}
+.chargeSwiper .charge-planning2 .summary-item {
+  width: 16.5%;
+  display: flex;
+  padding: 16px 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f9f9;
+}
+.chargeSwiper .charge-planning2 .summary-item p {
+  padding: 0;
+  margin: 0 0 0 12px;
+  text-align: left;
+}
+.chargeSwiper .charge-planning2 .bottom-content {
+  display: flex;
+  align-items: center;
+}
+.chargeSwiper .charge-planning2 .bottom-content img {
+  height: 100%;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning {
+  width: 42vw;
+  padding-left: 9.79vw;
+  font-size: 0.8333vw;
+  margin-bottom: 30px;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning p {
+  padding: 0;
+  text-align: left;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning ul {
+  padding-left: 16px;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning-btn {
+  display: flex;
+  margin-top: 30px;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning-btn a {
+  width: 50%;
+  text-align: center;
+  font-size: 0.628vw;
+}
+.chargeSwiper .charge-planning2 .bottom-content .content-planning-btn .white-btn {
+  margin-left: 0;
+  margin-right: 30px;
+  text-decoration: none;
+  border: 1px solid #1464f4;
+}
+.chargeSwiper .charging-type .parallax-bg {
+  padding: 64px 30px;
+}
+.chargeSwiper .charging-type h2 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  line-height: 60.24px;
+  letter-spacing: -2%;
+  margin-left: 30px;
+}
+.chargeSwiper .charging-type p {
+  font-size: 0.83333vw;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 7.407vh;
+  margin-left: 30px;
+}
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item {
+  background-color: #f7f9f9;
+}
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content {
+  padding: 24px 16px;
+}
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content h4 {
+  font-size: 1.286rem;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 12px;
+}
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content p {
+  margin-bottom: 24px;
+  font-size: 1.143rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content .item-detail .title,
+.chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content .item-detail .subtitle {
+  padding-left: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
+}/*# sourceMappingURL=style.css.map */
