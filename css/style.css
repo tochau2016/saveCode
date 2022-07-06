@@ -414,15 +414,15 @@ nav {
 .chargeSwiper .charging-type h2 {
   font-size: 2.5vw;
   font-weight: 300;
-  line-height: 60.24px;
+  line-height: 150%;
   letter-spacing: -2%;
   margin-left: 30px;
 }
 .chargeSwiper .charging-type p {
   font-size: 0.83333vw;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1.143rem;
+  line-height: 50%;
   margin-bottom: 7.407vh;
   margin-left: 30px;
 }
@@ -443,6 +443,7 @@ nav {
   font-size: 1.143rem;
   font-weight: 400;
   line-height: 150%;
+  margin-left: 0;
 }
 .chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content .item-detail .title,
 .chargeSwiper .charging-type .chargeTypeSwiper .charge-type-item .item-content .item-detail .subtitle {
@@ -450,4 +451,35 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   line-height: 150%;
+}
+.chargeSwiper .charge-device .parallax-bg {
+  padding: 64px 30px;
+}
+.chargeSwiper .charge-device h2 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  line-height: 60.24px;
+  letter-spacing: -2%;
+  margin-left: 30px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.chargeSwiper .charge-device p {
+  font-size: 0.83333vw;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 7.407vh;
+  margin-left: 30px;
+  text-align: center;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper {
+  width: 50%;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content {
+  margin-right: 7vw;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content p {
+  text-align: left;
+  margin-left: 0;
 }/*# sourceMappingURL=style.css.map */

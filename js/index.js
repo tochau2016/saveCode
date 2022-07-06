@@ -31,4 +31,6 @@ $(document).ready(function () {
             clickable: true,
         },
     })
+
+    var chargeDeviceSwiper = new Swiper('.chargeDeviceSwiper', {})
 });
