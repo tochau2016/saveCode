@@ -22,6 +22,70 @@ $(document).ready(function () {
                 'translate3d(0px, 0px, 0px)',
             );
         }, 100);
+        if ($('.intro').hasClass('swiper-slide-active')) {
+            $('.battery-benefit .animate__bounceInDown').css({
+                'visibility': 'visible',
+                'animation-name': 'bounceInDown'
+            })
+            $('.battery-benefit .animate__rotateInDownLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'rotateInDownLeft'
+            })
+            $('.battery-benefit .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.battery-benefit .animate__fadeInRight').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInRight'
+            })
+        }
+        if ($('.battery-benefit').hasClass('swiper-slide-active')) {
+            $('.battery-term .animate__bounceInDown').css({
+                'visibility': 'visible',
+                'animation-name': 'bounceInDown'
+            })
+            $('.battery-term .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.battery-term .animate__fadeInRight').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInRight'
+            })
+            $('.battery-term .animate__fadeInUp').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInUp'
+            })
+        }
+        if ($('.battery-term').hasClass('swiper-slide-active')) {
+            $('.payment-guide .animate__fadeInRight').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInRight'
+            })
+            $('.payment-guide .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.payment-guide .animate__fadeInDown').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInDown'
+            })
+        }
+        if ($('.payment-guide').hasClass('swiper-slide-active')) {
+            $('.term-use-battery .animate__bounceInDown').css({
+                'visibility': 'visible',
+                'animation-name': 'bounceInDown'
+            })
+            $('.term-use-battery .animate__fadeInRight').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInRight'
+            })
+            $('.term-use-battery .animate__backInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'backInLeft'
+            })
+        }
     });
     var chargeTypeSwiper = new Swiper('.chargeTypeSwiper', {
         slidesPerView: 4,
@@ -32,5 +96,26 @@ $(document).ready(function () {
         },
     })
 
-    var chargeDeviceSwiper = new Swiper('.chargeDeviceSwiper', {})
+    var chargeDeviceSwiper = new Swiper('.chargeDeviceSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    })
+    var wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animated', // default
+            offset: 0,          // default
+            mobile: true,       // default
+            live: true        // default
+        }
+    )
+    wow.init();
 });

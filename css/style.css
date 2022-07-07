@@ -11,6 +11,8 @@ html {
   height: 100%;
   margin: 0;
   background-color: #f7f9f9;
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 nav {
@@ -260,7 +262,11 @@ nav {
   line-height: 27px;
 }
 .chargeSwiper .term-use-battery h2 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  line-height: 60.24px;
   text-align: center;
+  letter-spacing: -2%;
   margin-bottom: 30px;
 }
 .chargeSwiper .term-use-battery .parallax-bg {
@@ -453,7 +459,7 @@ nav {
   line-height: 150%;
 }
 .chargeSwiper .charge-device .parallax-bg {
-  padding: 64px 30px;
+  padding: 64px 0;
 }
 .chargeSwiper .charge-device h2 {
   font-size: 2.5vw;
@@ -474,12 +480,54 @@ nav {
   text-align: center;
 }
 .chargeSwiper .charge-device .chargeDeviceSwiper {
-  width: 50%;
+  padding-bottom: 14vh;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item {
+  display: flex;
+  justify-content: center;
 }
 .chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content {
   margin-right: 7vw;
 }
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content h3 {
+  margin-bottom: 2.778vh;
+}
 .chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content p {
   text-align: left;
   margin-left: 0;
+  margin-bottom: 24px;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content span {
+  font-weight: 600;
+  font-size: 0.7292vw;
+  line-height: 150%;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .left-content .title {
+  padding-left: 0;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .charge-device-item .item-content {
+  display: flex;
+  width: 50%;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-next:after,
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-prev:after {
+  background-image: none;
+  content: none;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-next,
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-prev {
+  top: 50vh;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-next {
+  right: 48vw;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-button-prev {
+  left: 48vw;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-pagination {
+  display: flex;
+}
+.chargeSwiper .charge-device .chargeDeviceSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 100%;
+  border-radius: 0;
 }/*# sourceMappingURL=style.css.map */

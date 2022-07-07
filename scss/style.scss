@@ -11,6 +11,8 @@ html {
   height: 100%;
   margin: 0;
   background-color: #f7f9f9;
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 nav {
   background-color: aquamarine;
@@ -271,7 +273,11 @@ nav {
 
   .term-use-battery {
     h2 {
+      font-size: 2.5vw;
+      font-weight: 300;
+      line-height: 60.24px;
       text-align: center;
+      letter-spacing: -2%;
       margin-bottom: 30px;
     }
     .parallax-bg {
@@ -350,8 +356,6 @@ nav {
           span {
             font-size: 2.71vw;
           }
-        }
-        a {
         }
       }
     }
@@ -481,7 +485,7 @@ nav {
 
   .charge-device {
     .parallax-bg {
-      padding: 64px 30px;
+      padding: 64px 0;
     }
     h2 {
       font-size: 2.5vw;
@@ -502,14 +506,55 @@ nav {
       text-align: center;
     }
     .chargeDeviceSwiper {
-      width: 50%;
+      padding-bottom: 14vh;
       .charge-device-item {
+        display: flex;
+        justify-content: center;
         .left-content {
           margin-right: 7vw;
+          h3 {
+            margin-bottom: 2.778vh;
+          }
           p {
             text-align: left;
             margin-left: 0;
+            margin-bottom: 24px;
           }
+          span {
+            font-weight: 600;
+            font-size: 0.7292vw;
+            line-height: 150%;
+          }
+          .title {
+            padding-left: 0;
+          }
+        }
+        .item-content {
+          display: flex;
+          width: 50%;
+        }
+      }
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        background-image: none;
+        content: none;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 50vh;
+      }
+      .swiper-button-next {
+        right: 48vw;
+      }
+      .swiper-button-prev {
+        left: 48vw;
+      }
+
+      .swiper-pagination {
+        display: flex;
+        .swiper-pagination-bullet {
+          width: 100%;
+          border-radius: 0;
         }
       }
     }
