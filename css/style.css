@@ -63,6 +63,15 @@ nav {
   text-transform: uppercase;
   margin-left: 30px;
   color: #1464f4;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .white-btn {
+    font-size: 0.73vw;
+    padding: 14px 22px;
+  }
 }
 .chargeSwiper .intro {
   display: flex;
@@ -521,7 +530,7 @@ nav {
 }
 @media (max-width: 1440px) {
   .chargeSwiper .charge-planning2 .parallax-bg {
-    padding: 30px;
+    padding: 20px;
   }
 }
 .chargeSwiper .charge-planning2 h2 {
@@ -584,27 +593,63 @@ nav {
 .chargeSwiper .charge-planning2 .bottom-content img {
   height: 100%;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content img {
+    width: 50vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 44vh;
+  }
+}
 .chargeSwiper .charge-planning2 .bottom-content .content-planning {
   width: 42vw;
   padding-left: 9.79vw;
   font-size: 0.8333vw;
   margin-bottom: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content .content-planning {
+    margin-bottom: 20px;
+  }
+}
 .chargeSwiper .charge-planning2 .bottom-content .content-planning p {
   padding: 0;
   text-align: left;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content .content-planning p {
+    margin-bottom: 10px;
+  }
+}
 .chargeSwiper .charge-planning2 .bottom-content .content-planning ul {
   padding-left: 16px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content .content-planning ul {
+    margin-bottom: 10px;
+  }
 }
 .chargeSwiper .charge-planning2 .bottom-content .content-planning-btn {
   display: flex;
   margin-top: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content .content-planning-btn {
+    margin-top: 10px;
+  }
+}
 .chargeSwiper .charge-planning2 .bottom-content .content-planning-btn a {
   width: 50%;
   text-align: center;
   font-size: 0.628vw;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .bottom-content .content-planning-btn a {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .chargeSwiper .charge-planning2 .bottom-content .content-planning-btn .white-btn {
   margin-left: 0;

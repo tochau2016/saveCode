@@ -56,6 +56,11 @@ nav {
     text-transform: uppercase;
     margin-left: 30px;
     color: #1464f4;
+    height: fit-content;
+    @media (max-width: 1440px) {
+      font-size: 0.73vw;
+      padding: 14px 22px;
+    }
   }
   .intro {
     display: flex;
@@ -472,7 +477,7 @@ nav {
     .parallax-bg {
       padding: 64px 30px;
       @media (max-width: 1440px) {
-        padding: 30px;
+        padding: 20px;
       }
     }
     h2 {
@@ -524,26 +529,49 @@ nav {
       align-items: center;
       img {
         height: 100%;
+        @media (max-width: 1440px) {
+          width: 50vw;
+          object-fit: cover;
+          height: 44vh;
+        }
       }
       .content-planning {
         width: 42vw;
         padding-left: 9.79vw;
         font-size: 0.8333vw;
         margin-bottom: 30px;
+        @media (max-width: 1440px) {
+          margin-bottom: 20px;
+        }
         p {
           padding: 0;
           text-align: left;
+          @media (max-width: 1440px) {
+            margin-bottom: 10px;
+          }
         }
         ul {
           padding-left: 16px;
+          @media (max-width: 1440px) {
+            margin-bottom: 10px;
+          }
         }
         &-btn {
           display: flex;
           margin-top: 30px;
+          @media (max-width: 1440px) {
+            margin-top: 10px;
+          }
           a {
             width: 50%;
             text-align: center;
             font-size: 0.628vw;
+            @media (max-width: 1440px) {
+              height: 6vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
           .white-btn {
             margin-left: 0;
