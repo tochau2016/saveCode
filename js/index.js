@@ -86,6 +86,40 @@ $(document).ready(function () {
                 'animation-name': 'backInLeft'
             })
         }
+        if ($('.term-use-battery').hasClass('swiper-slide-active')) {
+            $('.charge-planning .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.charge-planning .animate__zoomIn').css({
+                'visibility': 'visible',
+                'animation-name': 'zoomIn'
+            })
+        }
+        if ($('.charge-planning').hasClass('swiper-slide-active')) {
+            $('.charge-planning2 .animate__bounceInDown').css({
+                'visibility': 'visible',
+                'animation-name': 'bounceInDown'
+            })
+            $('.charge-planning2 .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.charge-planning2 .animate__fadeInRight').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInRight'
+            })
+        }
+        if ($('.charge-planning2').hasClass('swiper-slide-active')) {
+            $('.charging-type .animate__fadeInLeft').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInLeft'
+            })
+            $('.charging-type .animate__fadeInUp').css({
+                'visibility': 'visible',
+                'animation-name': 'fadeInUp'
+            })
+        }
     });
     var chargeTypeSwiper = new Swiper('.chargeTypeSwiper', {
         slidesPerView: 4,

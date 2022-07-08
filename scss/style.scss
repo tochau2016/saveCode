@@ -34,13 +34,18 @@ nav {
   .blue-btn {
     font-weight: 700;
     font-size: 0.83vw;
-    line-height: 20px;
+    line-height: 150%;
     padding: 16px 24px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #ffffff;
     text-decoration: none;
     background-color: #1464f4;
+    height: fit-content;
+    @media (max-width: 1440px) {
+      font-size: 0.73vw;
+      padding: 14px 22px;
+    }
   }
   .white-btn {
     font-weight: 700;
@@ -56,6 +61,9 @@ nav {
     display: flex;
     height: 100vh;
     padding: 30px;
+    @media (max-width: 1440px) {
+      padding-top: 20px;
+    }
     .parallax-bg {
       display: flex;
       width: 100%;
@@ -63,17 +71,21 @@ nav {
     h6 {
       font-weight: 300;
       font-size: 1.75rem;
-      line-height: 35px;
+      line-height: 150%;
       text-align: left;
+      @media (max-width: 1440px) {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+      }
     }
     h2 {
       font-weight: 300;
       font-size: 4rem;
-      line-height: 80px;
+      line-height: 150%;
       letter-spacing: -0.02em;
       text-align: left;
       @media (max-width: 1440px) {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
     p {
@@ -83,6 +95,10 @@ nav {
       margin-bottom: 30px;
       width: 70%;
       text-align: left;
+      @media (max-width: 1440px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
 
     .buttons {
@@ -94,12 +110,18 @@ nav {
       width: 50%;
       img {
         width: 100%;
+        @media (max-width: 1440px) {
+          width: 84%;
+        }
       }
     }
     .intro-content-left {
       margin-right: 100px;
       .left-content {
         margin-bottom: 56px;
+        @media (max-width: 1440px) {
+          margin-bottom: 30px;
+        }
       }
     }
     .intro-content-right {
@@ -108,6 +130,9 @@ nav {
       justify-content: flex-end;
       h6 {
         margin-top: 56px;
+        @media (max-width: 1440px) {
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -121,7 +146,12 @@ nav {
       text-align: center;
       font-weight: 600;
       font-size: 48px;
-      line-height: 24px;
+      line-height: 150%;
+      @media (max-width: 1440px) {
+        font-size: 36px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+      }
     }
     &-content {
       padding: 0 30px;
@@ -132,6 +162,14 @@ nav {
         border-radius: 10px;
         width: 25%;
         padding: 30px;
+        @media (max-width: 1440px) {
+          padding: 15px;
+        }
+        svg {
+          @media (max-width: 1440px) {
+            width: 32px;
+          }
+        }
         p {
           margin: 24px 0 0;
           font-weight: 600;
@@ -139,6 +177,7 @@ nav {
           line-height: 24px;
           @media (max-width: 1440px) {
             margin: 16px 0 0;
+            font-size: 14px;
           }
         }
       }
@@ -146,25 +185,39 @@ nav {
     img {
       position: absolute;
       bottom: 0;
+      @media (max-width: 1440px) {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   .battery-term {
     padding: 63px 188px 0;
+    @media (max-width: 1440px) {
+      padding: 4px 100px;
+    }
     h2 {
       text-align: center;
       margin-bottom: 48px;
       font-weight: 300;
-      font-size: 48px;
+      font-size: 2.5vw;
       line-height: 60.24px;
       letter-spacing: -2%;
       text-align: center;
+      @media (max-width: 1440px) {
+        margin-bottom: 4px;
+      }
     }
     &-content {
       display: flex;
       column-gap: 80px;
       padding: 40px;
       background: #f7f9f9;
+      @media (max-width: 1440px) {
+        padding: 20px;
+      }
       .left-content,
       .right-content {
         width: 50%;
@@ -178,11 +231,19 @@ nav {
           font-size: 28px;
           line-height: 35.14px;
           margin-bottom: 30px;
+          @media (max-width: 1440px) {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
         }
         p {
           font-weight: 400;
           font-size: 16px;
-          line-height: 24px;
+          line-height: 150%;
+          @media (max-width: 1440px) {
+            font-size: 12px;
+            margin-bottom: 7px;
+          }
         }
       }
       .right-content {
@@ -190,15 +251,25 @@ nav {
         &-bottom {
           h4 {
             font-weight: 600;
-            font-size: 20;
-            line-height: 25.1px;
+            font-size: 20px;
+            line-height: 150%;
+            @media (max-width: 1440px) {
+              font-size: 16px;
+            }
           }
           p {
             font-weight: 400;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 150%;
+            @media (max-width: 1440px) {
+              font-size: 12px;
+              margin-bottom: 7px;
+            }
           }
           table {
+            @media (max-width: 1440px) {
+              margin-bottom: 4px;
+            }
             thead {
               background-color: #7a99ac;
               th {
@@ -207,6 +278,9 @@ nav {
                 font-size: 16px;
                 line-height: 24px;
                 text-align: center;
+                @media (max-width: 1440px) {
+                  padding: 0 .75rem;
+                }
               }
             }
             tbody {
@@ -217,6 +291,9 @@ nav {
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 21px;
+                  @media (max-width: 1440px) {
+                    padding: .25rem .75rem;
+                  }
                 }
               }
             }
@@ -238,6 +315,10 @@ nav {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media (max-width: 1440px) {
+        padding: 30px 150px;
+        justify-content: flex-start;
+      }
       .title {
         margin-bottom: 16px;
         font-weight: 300;
@@ -275,13 +356,19 @@ nav {
     h2 {
       font-size: 2.5vw;
       font-weight: 300;
-      line-height: 60.24px;
+      line-height: 150%;
       text-align: center;
       letter-spacing: -2%;
       margin-bottom: 30px;
+      @media (max-width: 1440px) {
+        margin-bottom: 16px;
+      }
     }
     .parallax-bg {
       padding: 64px;
+      @media (max-width: 1440px) {
+        padding: 10px 64px;
+      }
     }
     .content {
       display: flex;
@@ -289,6 +376,9 @@ nav {
       background-color: #f7f9f9;
       justify-content: space-around;
       align-items: center;
+      @media (max-width: 1440px) {
+        padding: 10px;
+      }
       img {
         width: 30vw;
         height: 100%;
@@ -302,6 +392,10 @@ nav {
             font-size: 28px;
             line-height: 35px;
             margin-bottom: 16px;
+            @media (max-width: 1440px) {
+              font-size: 20px;
+              margin-bottom: 10px;
+            }
           }
           svg {
             margin-right: 4px;
@@ -311,6 +405,10 @@ nav {
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
+            @media (max-width: 1440px) {
+              margin-bottom: 0;
+              font-size: 14px;
+            }
           }
         }
       }
@@ -323,8 +421,14 @@ nav {
       justify-content: center;
       align-items: center;
       padding: 64px 188px;
+      @media (max-width: 1440px) {
+        padding: 0 150px;
+      }
       img {
         width: 50vw;
+        @media (max-width: 1440px) {
+          width: 40vw;
+        }
       }
     }
     &-content {
@@ -333,9 +437,12 @@ nav {
         font-size: 3vw;
         font-weight: 300;
         font-size: 56px;
-        line-height: 70px;
+        line-height: 150%;
         letter-spacing: -0.02em;
         margin-bottom: 30px;
+        @media (max-width: 1440px) {
+          font-size: 40px;
+        }
       }
       p {
         margin-bottom: 30px;
@@ -364,23 +471,37 @@ nav {
   .charge-planning2 {
     .parallax-bg {
       padding: 64px 30px;
+      @media (max-width: 1440px) {
+        padding: 30px;
+      }
     }
     h2 {
       font-size: 2.5vw;
       font-weight: 300;
-      line-height: 60.24px;
+      line-height: 150%;
       text-align: center;
       letter-spacing: -2%;
       margin-bottom: 16px;
+      @media (max-width: 1440px) {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
     }
     p {
       padding: 0 20vw;
       text-align: center;
+      @media (max-width: 1440px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
     .summary {
       display: flex;
       column-gap: 30px;
       margin-bottom: 48px;
+      @media (max-width: 1440px) {
+        margin-bottom: 30px;
+      }
       &-item {
         width: 16.5%;
         display: flex;
@@ -388,6 +509,9 @@ nav {
         align-items: center;
         justify-content: center;
         background-color: #f7f9f9;
+        @media (max-width: 1440px) {
+          padding: 8px 20px;
+        }
         p {
           padding: 0;
           margin: 0 0 0 12px;

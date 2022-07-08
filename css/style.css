@@ -37,13 +37,22 @@ nav {
 .chargeSwiper .blue-btn {
   font-weight: 700;
   font-size: 0.83vw;
-  line-height: 20px;
+  line-height: 150%;
   padding: 16px 24px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
   background-color: #1464f4;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .blue-btn {
+    font-size: 0.73vw;
+    padding: 14px 22px;
+  }
 }
 .chargeSwiper .white-btn {
   font-weight: 700;
@@ -60,6 +69,11 @@ nav {
   height: 100vh;
   padding: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .intro {
+    padding-top: 20px;
+  }
+}
 .chargeSwiper .intro .parallax-bg {
   display: flex;
   width: 100%;
@@ -67,19 +81,25 @@ nav {
 .chargeSwiper .intro h6 {
   font-weight: 300;
   font-size: 1.75rem;
-  line-height: 35px;
+  line-height: 150%;
   text-align: left;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .intro h6 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
 }
 .chargeSwiper .intro h2 {
   font-weight: 300;
   font-size: 4rem;
-  line-height: 80px;
+  line-height: 150%;
   letter-spacing: -0.02em;
   text-align: left;
 }
 @media (max-width: 1440px) {
   .chargeSwiper .intro h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .chargeSwiper .intro p {
@@ -89,6 +109,12 @@ nav {
   margin-bottom: 30px;
   width: 70%;
   text-align: left;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .intro p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 .chargeSwiper .intro .buttons {
   display: flex;
@@ -101,11 +127,22 @@ nav {
 .chargeSwiper .intro .intro-content-right img {
   width: 100%;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .intro .intro-content-left img,
+.chargeSwiper .intro .intro-content-right img {
+    width: 84%;
+  }
+}
 .chargeSwiper .intro .intro-content-left {
   margin-right: 100px;
 }
 .chargeSwiper .intro .intro-content-left .left-content {
   margin-bottom: 56px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .intro .intro-content-left .left-content {
+    margin-bottom: 30px;
+  }
 }
 .chargeSwiper .intro .intro-content-right {
   display: flex;
@@ -114,6 +151,11 @@ nav {
 }
 .chargeSwiper .intro .intro-content-right h6 {
   margin-top: 56px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .intro .intro-content-right h6 {
+    margin-top: 30px;
+  }
 }
 .chargeSwiper .battery-benefit {
   height: 100vh;
@@ -124,7 +166,14 @@ nav {
   text-align: center;
   font-weight: 600;
   font-size: 48px;
-  line-height: 24px;
+  line-height: 150%;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-benefit h2 {
+    font-size: 36px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 .chargeSwiper .battery-benefit-content {
   padding: 0 30px;
@@ -138,6 +187,16 @@ nav {
   width: 25%;
   padding: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-benefit-content .content-item {
+    padding: 15px;
+  }
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-benefit-content .content-item svg {
+    width: 32px;
+  }
+}
 .chargeSwiper .battery-benefit-content .content-item p {
   margin: 24px 0 0;
   font-weight: 600;
@@ -147,23 +206,42 @@ nav {
 @media (max-width: 1440px) {
   .chargeSwiper .battery-benefit-content .content-item p {
     margin: 16px 0 0;
+    font-size: 14px;
   }
 }
 .chargeSwiper .battery-benefit img {
   position: absolute;
   bottom: 0;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-benefit img {
+    height: 50vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .chargeSwiper .battery-term {
   padding: 63px 188px 0;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term {
+    padding: 4px 100px;
+  }
 }
 .chargeSwiper .battery-term h2 {
   text-align: center;
   margin-bottom: 48px;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 2.5vw;
   line-height: 60.24px;
   letter-spacing: -2%;
   text-align: center;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term h2 {
+    margin-bottom: 4px;
+  }
 }
 .chargeSwiper .battery-term-content {
   display: flex;
@@ -171,6 +249,11 @@ nav {
        column-gap: 80px;
   padding: 40px;
   background: #f7f9f9;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content {
+    padding: 20px;
+  }
 }
 .chargeSwiper .battery-term-content .left-content,
 .chargeSwiper .battery-term-content .right-content {
@@ -185,20 +268,48 @@ nav {
   line-height: 35.14px;
   margin-bottom: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .left-content h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
 .chargeSwiper .battery-term-content .left-content p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 150%;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .left-content p {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
 }
 .chargeSwiper .battery-term-content .right-content-top h4, .chargeSwiper .battery-term-content .right-content-bottom h4 {
   font-weight: 600;
-  font-size: 20;
-  line-height: 25.1px;
+  font-size: 20px;
+  line-height: 150%;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .right-content-top h4, .chargeSwiper .battery-term-content .right-content-bottom h4 {
+    font-size: 16px;
+  }
 }
 .chargeSwiper .battery-term-content .right-content-top p, .chargeSwiper .battery-term-content .right-content-bottom p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 150%;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .right-content-top p, .chargeSwiper .battery-term-content .right-content-bottom p {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .right-content-top table, .chargeSwiper .battery-term-content .right-content-bottom table {
+    margin-bottom: 4px;
+  }
 }
 .chargeSwiper .battery-term-content .right-content-top table thead, .chargeSwiper .battery-term-content .right-content-bottom table thead {
   background-color: #7a99ac;
@@ -210,6 +321,11 @@ nav {
   line-height: 24px;
   text-align: center;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .right-content-top table thead th, .chargeSwiper .battery-term-content .right-content-bottom table thead th {
+    padding: 0 0.75rem;
+  }
+}
 .chargeSwiper .battery-term-content .right-content-top table tbody tr th,
 .chargeSwiper .battery-term-content .right-content-top table tbody tr td, .chargeSwiper .battery-term-content .right-content-bottom table tbody tr th,
 .chargeSwiper .battery-term-content .right-content-bottom table tbody tr td {
@@ -217,6 +333,13 @@ nav {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .battery-term-content .right-content-top table tbody tr th,
+.chargeSwiper .battery-term-content .right-content-top table tbody tr td, .chargeSwiper .battery-term-content .right-content-bottom table tbody tr th,
+.chargeSwiper .battery-term-content .right-content-bottom table tbody tr td {
+    padding: 0.25rem 0.75rem;
+  }
 }
 .chargeSwiper .battery-term-content .right-content-top span, .chargeSwiper .battery-term-content .right-content-bottom span {
   font-weight: 600;
@@ -229,6 +352,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .payment-guide .parallax-bg {
+    padding: 30px 150px;
+    justify-content: flex-start;
+  }
 }
 .chargeSwiper .payment-guide .parallax-bg .title {
   margin-bottom: 16px;
@@ -264,13 +393,23 @@ nav {
 .chargeSwiper .term-use-battery h2 {
   font-size: 2.5vw;
   font-weight: 300;
-  line-height: 60.24px;
+  line-height: 150%;
   text-align: center;
   letter-spacing: -2%;
   margin-bottom: 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .term-use-battery h2 {
+    margin-bottom: 16px;
+  }
+}
 .chargeSwiper .term-use-battery .parallax-bg {
   padding: 64px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .term-use-battery .parallax-bg {
+    padding: 10px 64px;
+  }
 }
 .chargeSwiper .term-use-battery .content {
   display: flex;
@@ -278,6 +417,11 @@ nav {
   background-color: #f7f9f9;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .term-use-battery .content {
+    padding: 10px;
+  }
 }
 .chargeSwiper .term-use-battery .content img {
   width: 30vw;
@@ -295,6 +439,12 @@ nav {
   line-height: 35px;
   margin-bottom: 16px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .term-use-battery .content .term-content ul h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
 .chargeSwiper .term-use-battery .content .term-content ul svg {
   margin-right: 4px;
 }
@@ -304,14 +454,30 @@ nav {
   font-size: 16px;
   line-height: 24px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .term-use-battery .content .term-content ul li {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
 .chargeSwiper .charge-planning .parallax-bg {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 64px 188px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning .parallax-bg {
+    padding: 0 150px;
+  }
+}
 .chargeSwiper .charge-planning .parallax-bg img {
   width: 50vw;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning .parallax-bg img {
+    width: 40vw;
+  }
 }
 .chargeSwiper .charge-planning-content {
   margin-right: 10vw;
@@ -320,9 +486,14 @@ nav {
   font-size: 3vw;
   font-weight: 300;
   font-size: 56px;
-  line-height: 70px;
+  line-height: 150%;
   letter-spacing: -0.02em;
   margin-bottom: 30px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning-content h2 {
+    font-size: 40px;
+  }
 }
 .chargeSwiper .charge-planning-content p {
   margin-bottom: 30px;
@@ -348,23 +519,45 @@ nav {
 .chargeSwiper .charge-planning2 .parallax-bg {
   padding: 64px 30px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .parallax-bg {
+    padding: 30px;
+  }
+}
 .chargeSwiper .charge-planning2 h2 {
   font-size: 2.5vw;
   font-weight: 300;
-  line-height: 60.24px;
+  line-height: 150%;
   text-align: center;
   letter-spacing: -2%;
   margin-bottom: 16px;
 }
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+}
 .chargeSwiper .charge-planning2 p {
   padding: 0 20vw;
   text-align: center;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 .chargeSwiper .charge-planning2 .summary {
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
   margin-bottom: 48px;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .summary {
+    margin-bottom: 30px;
+  }
 }
 .chargeSwiper .charge-planning2 .summary-item {
   width: 16.5%;
@@ -373,6 +566,11 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: #f7f9f9;
+}
+@media (max-width: 1440px) {
+  .chargeSwiper .charge-planning2 .summary-item {
+    padding: 8px 20px;
+  }
 }
 .chargeSwiper .charge-planning2 .summary-item p {
   padding: 0;
