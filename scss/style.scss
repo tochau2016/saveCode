@@ -12,11 +12,16 @@ html {
   margin: 0;
   background-color: #f7f9f9;
   scroll-behavior: smooth;
-  overflow: hidden;
+}
+html {
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 nav {
   background-color: aquamarine;
-  height: 85px;
+  height: 65px;
 }
 .parallax-bg {
   background-repeat: no-repeat;
@@ -28,8 +33,30 @@ nav {
 .chargeSwiper {
   width: 100%;
   height: 100%;
+  // overflow: visible;
   .swiper-slide {
     background-color: #ffffff;
+  }
+  .page-container {
+    @media (max-width: 991px) {
+      display: block;
+      overflow: scroll;
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    @media (max-width: 1440px) {
+      bottom: 20px;
+    }
+    @media (max-width: 991px) {
+      bottom: 0;
+      display: none;
+    }
+    .swiper-pagination-bullet {
+      width: 100%;
+      border-radius: 0;
+      height: 4px;
+    }
   }
   .blue-btn {
     font-weight: 700;
@@ -42,9 +69,16 @@ nav {
     text-decoration: none;
     background-color: #1464f4;
     height: fit-content;
+    text-align: center;
     @media (max-width: 1440px) {
       font-size: 0.73vw;
       padding: 14px 22px;
+    }
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 10%;
+      width: 100%;
     }
   }
   .white-btn {
@@ -57,9 +91,18 @@ nav {
     margin-left: 30px;
     color: #1464f4;
     height: fit-content;
+    text-align: center;
     @media (max-width: 1440px) {
       font-size: 0.73vw;
       padding: 14px 22px;
+    }
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 10%;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 14px;
     }
   }
   .intro {
@@ -69,9 +112,18 @@ nav {
     @media (max-width: 1440px) {
       padding-top: 20px;
     }
+    @media (max-width: 991px) {
+      padding: 54px 0;
+    }
+    @media (max-width: 991px) {
+      height: fit-content;
+    }
     .parallax-bg {
       display: flex;
       width: 100%;
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
     }
     h6 {
       font-weight: 300;
@@ -82,6 +134,10 @@ nav {
         font-size: 1.25rem;
         margin-bottom: 0;
       }
+      @media (max-width: 991px) {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
     }
     h2 {
       font-weight: 300;
@@ -91,6 +147,12 @@ nav {
       text-align: left;
       @media (max-width: 1440px) {
         font-size: 2rem;
+      }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 24px;
+        width: 65%;
       }
     }
     p {
@@ -104,19 +166,31 @@ nav {
         font-size: 14px;
         margin-bottom: 20px;
       }
+      @media (max-width: 991px) {
+        width: 100%;
+      }
     }
 
     .buttons {
       display: flex;
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
     }
 
     .intro-content-left,
     .intro-content-right {
       width: 50%;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
       img {
         width: 100%;
         @media (max-width: 1440px) {
           width: 84%;
+        }
+        @media (max-width: 991px) {
+          width: 100%;
         }
       }
     }
@@ -127,17 +201,39 @@ nav {
         @media (max-width: 1440px) {
           margin-bottom: 30px;
         }
+        @media (max-width: 991px) {
+          padding: 0 16px;
+          margin-bottom: 56px;
+        }
       }
     }
     .intro-content-right {
       display: flex;
       flex-direction: column-reverse;
       justify-content: flex-end;
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
       h6 {
         margin-top: 56px;
         @media (max-width: 1440px) {
           margin-top: 30px;
         }
+        @media (max-width: 991px) {
+          margin-top: 0;
+        }
+      }
+      .right-content {
+        @media (max-width: 991px) {
+          padding: 0 16px;
+          margin: 56px 0;
+        }
+      }
+    }
+    .blue-btn-cont {
+      @media (max-width: 991px) {
+        display: flex;
+        text-align: center;
       }
     }
   }
@@ -157,11 +253,19 @@ nav {
         padding-top: 30px;
         margin-bottom: 30px;
       }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        line-height: 35px;
+        text-align: left;
+        margin-left: 15.5px;
+      }
     }
     &-content {
-      padding: 0 30px;
-      display: flex;
-      column-gap: 30px;
+      .slides {
+        padding: 0 30px;
+        display: flex;
+        column-gap: 30px;
+      }
       .content-item {
         background-color: #f7f9f9;
         border-radius: 10px;
@@ -187,6 +291,71 @@ nav {
         }
       }
     }
+    &-img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      @media (max-width: 991px) {
+        position: relative;
+      }
+      .top-linear {
+        @media (max-width: 991px) {
+          height: 20%;
+          position: absolute;
+          inset: 0 0 0 0;
+          background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          z-index: 2;
+        }
+      }
+      .bottom-linear {
+        height: 20%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: 2;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+    }
+    .slider {
+      @media (max-width: 991px) {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 30px;
+        padding: 0 0 0 16px;
+      }
+      .slides {
+        @media (max-width: 991px) {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .slide-item {
+          @media (max-width: 991px) {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            border-radius: 10px;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            flex-basis: 70%;
+          }
+        }
+      }
+    }
     img {
       position: absolute;
       bottom: 0;
@@ -195,6 +364,9 @@ nav {
         width: 100%;
         object-fit: cover;
       }
+      @media (max-width: 991px) {
+        position: relative;
+      }
     }
   }
 
@@ -202,6 +374,11 @@ nav {
     padding: 63px 188px 0;
     @media (max-width: 1440px) {
       padding: 4px 100px;
+    }
+    @media (max-width: 991px) {
+      padding: 72px 0 0;
+      height: fit-content;
+      margin-bottom: 56px;
     }
     h2 {
       text-align: center;
@@ -214,6 +391,12 @@ nav {
       @media (max-width: 1440px) {
         margin-bottom: 4px;
       }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 20px;
+      }
     }
     &-content {
       display: flex;
@@ -223,9 +406,17 @@ nav {
       @media (max-width: 1440px) {
         padding: 20px;
       }
+      @media (max-width: 991px) {
+        flex-direction: column;
+        height: 396px;
+        overflow: scroll;
+      }
       .left-content,
       .right-content {
         width: 50%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
       }
       .left-content {
         img {
@@ -258,9 +449,6 @@ nav {
             font-weight: 600;
             font-size: 20px;
             line-height: 150%;
-            @media (max-width: 1440px) {
-              font-size: 16px;
-            }
           }
           p {
             font-weight: 400;
@@ -284,7 +472,7 @@ nav {
                 line-height: 24px;
                 text-align: center;
                 @media (max-width: 1440px) {
-                  padding: 0 .75rem;
+                  padding: 0 0.75rem;
                 }
               }
             }
@@ -297,7 +485,7 @@ nav {
                   font-size: 14px;
                   line-height: 21px;
                   @media (max-width: 1440px) {
-                    padding: .25rem .75rem;
+                    padding: 0.25rem 0.75rem;
                   }
                 }
               }
@@ -314,6 +502,9 @@ nav {
   }
 
   .payment-guide {
+    @media (max-width: 991px) {
+      height: fit-content;
+    }
     .parallax-bg {
       padding: 0 300px;
       display: flex;
@@ -324,17 +515,41 @@ nav {
         padding: 30px 150px;
         justify-content: flex-start;
       }
+      @media (max-width: 991px) {
+        padding: 0;
+      }
       .title {
         margin-bottom: 16px;
         font-weight: 300;
         font-size: 48px;
         line-height: 60.24px;
         margin-bottom: 16px;
+        text-align: center;
+        @media (max-width: 991px) {
+          font-size: 28px;
+          line-height: 35px;
+          text-align: left;
+          margin-left: 15.5px;
+          margin-left: 0;
+        }
       }
       .subtitle {
         text-align: center;
         padding: 0 150px;
         margin-bottom: 64px;
+        line-height: 150%;
+        font-weight: 600;
+        @media (max-width: 991px) {
+          padding: 0;
+          font-size: 12px;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &-header {
+      @media (max-width: 991px) {
+        padding: 0 24px;
       }
     }
     &-content {
@@ -345,19 +560,70 @@ nav {
         background-color: #f7f9f9;
         border-radius: 10px;
         padding: 30px;
+        margin-left: 25px;
+        @media (max-width: 991px) {
+          width: 100%;
+          padding: 16px;
+          margin-left: 0;
+        }
         svg {
           margin-bottom: 16px;
+          @media (max-width: 991px) {
+            width: 47px;
+            height: 49px;
+          }
         }
         p {
           font-weight: 600;
           font-size: 18px;
           line-height: 27px;
+          @media (max-width: 991px) {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .slider {
+      @media (max-width: 991px) {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 30px;
+        padding: 0 0 0 16px;
+      }
+      .slides {
+        @media (max-width: 991px) {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          column-gap: 16px;
+          padding-right: 16px;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .slide-item {
+          @media (max-width: 991px) {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            border-radius: 10px;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            flex-basis: 70%;
+          }
         }
       }
     }
   }
 
   .term-use-battery {
+    @media (max-width: 991px) {
+      height: fit-content;
+    }
     h2 {
       font-size: 2.5vw;
       font-weight: 300;
@@ -368,11 +634,20 @@ nav {
       @media (max-width: 1440px) {
         margin-bottom: 16px;
       }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 20px;
+      }
     }
     .parallax-bg {
       padding: 64px;
       @media (max-width: 1440px) {
         padding: 10px 64px;
+      }
+      @media (max-width: 991px) {
+        padding: 0;
       }
     }
     .content {
@@ -382,16 +657,33 @@ nav {
       justify-content: space-around;
       align-items: center;
       @media (max-width: 1440px) {
-        padding: 10px;
+        padding: 16px;
+      }
+      @media (max-width: 991px) {
+        flex-direction: column;
+        padding: 0;
+        height: fit-content;
       }
       img {
         width: 30vw;
         height: 100%;
+        @media (max-width: 991px) {
+          display: none;
+        }
       }
       .term-content {
         width: 50%;
+        @media (max-width: 991px) {
+          width: 100%;
+          height: 396px;
+          overflow: scroll;
+          padding: 16px;
+        }
         ul {
           list-style-type: none;
+          @media (max-width: 991px) {
+            padding: 0;
+          }
           h4 {
             font-weight: 300;
             font-size: 28px;
@@ -421,6 +713,9 @@ nav {
   }
 
   .charge-planning {
+    @media (max-width: 991px) {
+      height: fit-content;
+    }
     .parallax-bg {
       display: flex;
       justify-content: center;
@@ -429,6 +724,11 @@ nav {
       @media (max-width: 1440px) {
         padding: 0 150px;
       }
+      @media (max-width: 991px) {
+        height: fit-content;
+        padding: 50px 16px 0;
+        flex-direction: column;
+      }
       img {
         width: 50vw;
         @media (max-width: 1440px) {
@@ -436,8 +736,16 @@ nav {
         }
       }
     }
+    img {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
     &-content {
       margin-right: 10vw;
+      @media (max-width: 991px) {
+        margin: 0;
+      }
       h2 {
         font-size: 3vw;
         font-weight: 300;
@@ -448,12 +756,26 @@ nav {
         @media (max-width: 1440px) {
           font-size: 40px;
         }
+        @media (max-width: 991px) {
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 150%;
+          margin-bottom: 20px;
+        }
+        br {
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
       }
       p {
         margin-bottom: 30px;
         font-weight: 400;
         font-size: 0.83vw;
-        line-height: 24px;
+        line-height: 150%;
+        @media (max-width: 991px) {
+          font-size: 14px;
+        }
       }
       .numbers {
         display: flex;
@@ -463,21 +785,70 @@ nav {
         &-item {
           display: block;
           font-size: 1.04vw;
-          line-height: 28px;
+          line-height: 150%;
+          font-weight: 400;
           letter-spacing: -0.02em;
+          @media (max-width: 991px) {
+            font-size: 20px;
+          }
           span {
             font-size: 2.71vw;
+            @media (max-width: 991px) {
+              font-size: 48px;
+            }
           }
         }
+      }
+      .charge-station-btn {
+        display: flex;
+        text-align: center;
       }
     }
   }
 
   .charge-planning2 {
+    @media (max-width: 991px) {
+      padding-top: 56px;
+    }
     .parallax-bg {
       padding: 64px 30px;
       @media (max-width: 1440px) {
         padding: 20px;
+      }
+      @media (max-width: 991px) {
+        padding: 0;
+      }
+    }
+    .slider {
+      @media (max-width: 991px) {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 30px;
+        padding: 0 0 0 16px;
+      }
+      .slides {
+        width: 100%;
+        column-gap: 30px;
+        @media (max-width: 991px) {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .slide-item {
+          @media (max-width: 991px) {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            flex-basis: 55%;
+          }
+        }
       }
     }
     h2 {
@@ -495,9 +866,16 @@ nav {
     p {
       padding: 0 20vw;
       text-align: center;
+      line-height: 150%;
+      font-size: 16px;
       @media (max-width: 1440px) {
         font-size: 14px;
         margin-bottom: 20px;
+      }
+      @media (max-width: 991px) {
+        padding: 0;
+        font-size: 12px;
+        padding: 0 16px;
       }
     }
     .summary {
@@ -506,6 +884,9 @@ nav {
       margin-bottom: 48px;
       @media (max-width: 1440px) {
         margin-bottom: 30px;
+      }
+      @media (max-width: 990px) {
+        padding-left: 16px;
       }
       &-item {
         width: 16.5%;
@@ -517,6 +898,9 @@ nav {
         @media (max-width: 1440px) {
           padding: 8px 20px;
         }
+        @media (max-width: 991px) {
+          margin-right: 20px;
+        }
         p {
           padding: 0;
           margin: 0 0 0 12px;
@@ -524,15 +908,26 @@ nav {
         }
       }
     }
+
     .bottom-content {
       display: flex;
       align-items: center;
+      @media (max-width: 991px) {
+        position: relative;
+        height: fit-content;
+        margin-top: 28vh;
+      }
       img {
         height: 100%;
         @media (max-width: 1440px) {
           width: 50vw;
           object-fit: cover;
           height: 44vh;
+        }
+        @media (max-width: 991px) {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
         }
       }
       .content-planning {
@@ -543,11 +938,28 @@ nav {
         @media (max-width: 1440px) {
           margin-bottom: 20px;
         }
+        @media (max-width: 991px) {
+          position: absolute;
+          z-index: 2;
+          width: 100%;
+          margin: auto;
+          top: -14vh;
+          padding-left: 0;
+        }
+        &-text {
+          padding: 12px;
+          width: 95%;
+          margin: auto;
+          background-color: rgb(255, 255, 255, 0.9);
+        }
         p {
           padding: 0;
           text-align: left;
           @media (max-width: 1440px) {
             margin-bottom: 10px;
+          }
+          @media (max-width: 991px) {
+            font-size: 12px;
           }
         }
         ul {
@@ -555,12 +967,21 @@ nav {
           @media (max-width: 1440px) {
             margin-bottom: 10px;
           }
+          li {
+            @media (max-width: 991px) {
+              font-size: 12px;
+            }
+          }
         }
         &-btn {
           display: flex;
           margin-top: 30px;
           @media (max-width: 1440px) {
             margin-top: 10px;
+          }
+          @media (max-width: 991px) {
+            flex-direction: column-reverse;
+            margin-top: 24px;
           }
           a {
             width: 50%;
@@ -572,12 +993,18 @@ nav {
               align-items: center;
               justify-content: center;
             }
+            @media (max-width: 991px) {
+              width: 100%;
+              font-size: 16px;
+            }
           }
           .white-btn {
             margin-left: 0;
             margin-right: 30px;
             text-decoration: none;
             border: 1px solid #1464f4;
+            @media (max-width: 991px) {
+            }
           }
         }
       }
@@ -585,8 +1012,18 @@ nav {
   }
 
   .charging-type {
+    @media (max-width: 991px) {
+      height: fit-content;
+      margin-bottom: 50px;
+    }
     .parallax-bg {
       padding: 64px 30px;
+      @media (max-width: 1440px) {
+        padding: 20px 30px;
+      }
+      @media (max-width: 991px) {
+        padding: 20px 0;
+      }
     }
     h2 {
       font-size: 2.5vw;
@@ -594,25 +1031,57 @@ nav {
       line-height: 150%;
       letter-spacing: -2%;
       margin-left: 30px;
+      @media (max-width: 1440px) {
+        font-size: 2vw;
+        margin-bottom: 8px;
+      }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 20px;
+        padding-left: 15.5px;
+        margin-left: 0;
+      }
     }
     p {
       font-size: 0.83333vw;
       font-weight: 400;
       font-size: 1.143rem;
-      line-height: 50%;
+      line-height: 150%;
       margin-bottom: 7.407vh;
       margin-left: 30px;
+      @media (max-width: 1440px) {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 991px) {
+        margin-left: 0;
+        padding-left: 15.5px;
+      }
     }
     .chargeTypeSwiper {
+      overflow-y: visible;
+      padding-bottom: 40px;
+      @media (max-width: 991px) {
+        padding: 12px;
+      }
       .charge-type-item {
         background-color: #f7f9f9;
         .item-content {
           padding: 24px 16px;
+          @media (max-width: 1440px) {
+            padding: 16px 8px;
+          }
           h4 {
             font-size: 1.286rem;
             font-weight: 600;
             line-height: 150%;
             margin-bottom: 12px;
+            @media (max-width: 1440px) {
+              font-size: 1rem;
+              margin-bottom: 8px;
+            }
           }
           p {
             margin-bottom: 24px;
@@ -620,6 +1089,10 @@ nav {
             font-weight: 400;
             line-height: 150%;
             margin-left: 0;
+            @media (max-width: 1440px) {
+              font-size: 12px;
+              margin-bottom: 8px;
+            }
           }
           .item-detail {
             .title,
@@ -628,8 +1101,34 @@ nav {
               font-size: 1rem;
               font-weight: 600;
               line-height: 150%;
+              @media (max-width: 1440px) {
+                font-size: 12px;
+              }
             }
           }
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        background-image: none;
+        content: none;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: -4vh;
+        @media (max-width: 1440px) {
+        }
+      }
+      // .swiper-button-next {
+      // }
+      .swiper-button-prev {
+        left: 92vw;
+        @media (max-width: 1440px) {
+          left: 90vw;
         }
       }
     }
@@ -638,52 +1137,120 @@ nav {
   .charge-device {
     .parallax-bg {
       padding: 64px 0;
+      @media (max-width: 1440px) {
+        padding: 20px 0;
+      }
     }
     h2 {
       font-size: 2.5vw;
       font-weight: 300;
-      line-height: 60.24px;
+      line-height: 150%;
       letter-spacing: -2%;
-      margin-left: 30px;
       margin-bottom: 16px;
       text-align: center;
+      @media (max-width: 1440px) {
+        font-size: 1.75vw;
+      }
+      @media (max-width: 991px) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 35px;
+        margin-bottom: 12px;
+        padding: 0 50px;
+      }
     }
     p {
       font-size: 0.83333vw;
       font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
+      line-height: 150%;
       margin-bottom: 7.407vh;
       margin-left: 30px;
       text-align: center;
+      @media (max-width: 1440px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 991px) {
+        font-size: 12px;
+        margin-left: 0;
+        padding: 0 15.5px;
+      }
     }
     .chargeDeviceSwiper {
       padding-bottom: 14vh;
+      @media (max-width: 1440px) {
+        padding-bottom: 0;
+      }
+      @media (max-width: 991px) {
+        padding: 0 16px;
+      }
       .charge-device-item {
         display: flex;
         justify-content: center;
         .left-content {
           margin-right: 7vw;
+          @media (max-width: 991px) {
+            padding: 8px;
+            background-color: #f7f9f9;
+            margin: 0;
+          }
           h3 {
             margin-bottom: 2.778vh;
+            line-height: 150%;
+            font-weight: 400;
+            @media (max-width: 1440px) {
+              font-size: 1.5vw;
+              margin-bottom: 2vh;
+            }
+            @media (max-width: 991px) {
+              font-size: 14px;
+            }
+            br {
+              @media (max-width: 991px) {
+                display: none;
+              }
+            }
           }
           p {
             text-align: left;
             margin-left: 0;
             margin-bottom: 24px;
+            @media (max-width: 1440px) {
+              margin-bottom: 18px;
+            }
+            @media (max-width: 991px) {
+              font-size: 12px;
+              padding: 0;
+            }
           }
           span {
             font-weight: 600;
             font-size: 0.7292vw;
             line-height: 150%;
+            @media (max-width: 991px) {
+              font-size: 12px;
+            }
           }
           .title {
             padding-left: 0;
+            @media (max-width: 991px) {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 150%;
+            }
           }
         }
         .item-content {
           display: flex;
           width: 50%;
+          @media (max-width: 991px) {
+            width: 100%;
+            flex-direction: column-reverse;
+          }
+          img {
+            @media (max-width: 1440px) {
+              height: 80%;
+            }
+          }
         }
       }
       .swiper-button-next:after,
@@ -694,20 +1261,18 @@ nav {
       .swiper-button-next,
       .swiper-button-prev {
         top: 50vh;
+        @media (max-width: 1440px) {
+          top: 64vh;
+        }
+        @media (max-width: 991px) {
+          display: none;
+        }
       }
       .swiper-button-next {
         right: 48vw;
       }
       .swiper-button-prev {
         left: 48vw;
-      }
-
-      .swiper-pagination {
-        display: flex;
-        .swiper-pagination-bullet {
-          width: 100%;
-          border-radius: 0;
-        }
       }
     }
   }
