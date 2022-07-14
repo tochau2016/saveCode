@@ -378,14 +378,16 @@ nav {
     z-index: 2;
   }
 }
-.chargeSwiper .battery-benefit-img .bottom-linear {
-  height: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
-  transform: matrix(1, 0, 0, -1, 0, 0);
+@media (max-width: 991px) {
+  .chargeSwiper .battery-benefit-img .bottom-linear {
+      height: 20%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: 2;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    }
 }
 @media (max-width: 991px) {
   .chargeSwiper .battery-benefit .slider {
@@ -1053,7 +1055,7 @@ nav {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .chargeSwiper .charge-planning2 .summary {
     padding-left: 16px;
   }
